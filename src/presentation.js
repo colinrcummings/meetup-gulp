@@ -7,6 +7,7 @@ import {
   Heading,
   Image,
   Layout,
+  Link,
   ListItem,
   List,
   Slide,
@@ -97,6 +98,34 @@ export default class Presentation extends React.Component {
               Example
             </ListItem>
           </List>
+        </Slide>
+        {/* note bene */}
+        <Slide
+          bgColor="tertiary"
+          transition={['fade']}
+        >
+          <Heading
+            italic
+            textColor="primary"
+            textSize={60}
+            margin="0 0 25px 0"
+          >
+            Notate Bene
+          </Heading>
+          <Layout>
+            <Fill>
+              <Image
+                height={225}
+                src={require('./images/bell_curve.jpg')}
+              />
+            </Fill>
+            <Fill>
+              <Image
+                height={225}
+                src={require('./images/not_a_tutorial.jpg')}
+              />
+            </Fill>
+          </Layout>
         </Slide>
         {/* environments: cover */}
         <Slide
@@ -490,6 +519,32 @@ export default class Presentation extends React.Component {
           >
             Toolkits, task runners, module bundlers, etc.
           </Text>
+        </Slide>
+        {/* workflow: evolution */}
+        <Slide
+          bgColor="tertiary"
+          transition={['fade']}
+        >
+          <Heading
+            textColor="primary"
+            textSize={60}
+            margin="0 0 15px 0"
+          >
+            Evolution
+          </Heading>
+          <Image
+            height={500}
+            src={require('./images/evolution.png')}
+          />
+          <Link
+            href={'https://blog.qmo.io/javascript-tooling-the-evolution-and-future-of-js-front-end-build-tools/'}
+            target="blank"
+            italic
+            textColor="#c6a5a6"
+            textSize={15}
+          >
+            From &ldquo;Javascript Tooling - The Evolution and Future of JS & Front-end Build Tools&rdquo;
+          </Link>
         </Slide>
         {/* gulp: cover */}
         <Slide
